@@ -2,7 +2,7 @@
 //  BabyNoggin_DemoTests.swift
 //  BabyNoggin-DemoTests
 //
-//  Created by Deepu Mukundan on 9/16/15.
+//  Created by Lekshmi Raveendranathapanicker on 9/16/15.
 //  Copyright (c) 2015 Lekshmi Raveendranathapanicker. All rights reserved.
 //
 

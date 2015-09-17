@@ -1,25 +1,669 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dzA-Pk-nqV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--MediaPlaybackVC-->
+        <scene sceneID="64J-u7-7y9">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7HQ-ZT-4GJ" userLabel="MediaPlaybackVC" customClass="MediaPlaybackViewController" customModule="BabyNoggin_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="f0U-pz-XPv"/>
+                        <viewControllerLayoutGuide type="bottom" id="yfa-wV-W5W"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="CMm-XP-hh3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="wTb-Nw-IMK">
+                                <rect key="frame" x="0.0" y="-15" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test Overview" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkA-XG-UdW">
+                                <rect key="frame" x="77" y="88" width="166" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQ7-MV-z3C">
+                                <rect key="frame" x="96" y="420" width="129" height="43"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="qNR-RK-RgK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next step">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Q6s-1P-Jqt" kind="show" identifier="testOverview" id="FUd-KR-viz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="NQ7-MV-z3C" secondAttribute="centerY" constant="-157.5" id="0aO-G4-lzL"/>
+                            <constraint firstAttribute="centerY" secondItem="VkA-XG-UdW" secondAttribute="centerY" constant="179.5" id="AjV-iK-kTx"/>
+                            <constraint firstAttribute="centerX" secondItem="VkA-XG-UdW" secondAttribute="centerX" id="Hgr-er-4gX"/>
+                            <constraint firstAttribute="centerX" secondItem="NQ7-MV-z3C" secondAttribute="centerX" constant="-0.5" id="t0v-NB-khm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="rolling front to back" id="k2t-82-a8P">
+                        <barButtonItem key="leftBarButtonItem" image="LeftArrow" id="5kq-Hj-lWl"/>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BF5-NJ-YVq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1149" y="376"/>
+        </scene>
+        <!--TestOverviewVC-->
+        <scene sceneID="Dge-qc-3M1">
+            <objects>
+                <viewController id="Q6s-1P-Jqt" userLabel="TestOverviewVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A1z-NO-KlF"/>
+                        <viewControllerLayoutGuide type="bottom" id="go1-fb-Hmq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rqk-tA-vCy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="G2S-ZL-YLv">
+                                <rect key="frame" x="-26" y="-16" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to test!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpp-00-AgL">
+                                <rect key="frame" x="88" y="90" width="145.5" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp8-np-IhZ">
+                                <rect key="frame" x="108" y="356" width="129" height="45"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="eMh-cS-t1w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next step">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rXB-Qx-idc" kind="show" id="lhZ-s9-yDv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-V6-oPc">
+                                <rect key="frame" x="26" y="131" width="268" height="209"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="209" id="A72-O0-Gym"/>
+                                    <constraint firstAttribute="width" constant="301" id="pes-MI-DkZ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93333333333333335" green="0.33333333333333331" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="1)">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93333333333333335" green="0.33333333333333331" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Place the baby on her stomach on a firm surface">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="2)">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93333333333333335" green="0.33333333333333331" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="See if ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="baby">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" rolls ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="over ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="onto her back">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=".">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pes-MI-DkZ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Jpp-00-AgL" secondAttribute="centerX" constant="-0.5" id="7DZ-2Y-LyU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uu8-V6-oPc" secondAttribute="trailing" constant="10" id="fbz-VC-6vq"/>
+                            <constraint firstAttribute="centerX" secondItem="qp8-np-IhZ" secondAttribute="centerX" constant="-12.5" id="g6S-bQ-JXf"/>
+                            <constraint firstAttribute="centerY" secondItem="qp8-np-IhZ" secondAttribute="centerY" constant="-94.5" id="m4O-PZ-6Xq"/>
+                            <constraint firstItem="Uu8-V6-oPc" firstAttribute="leading" secondItem="rqk-tA-vCy" secondAttribute="leadingMargin" constant="10" id="oJV-7J-XRa"/>
+                            <constraint firstItem="Uu8-V6-oPc" firstAttribute="top" secondItem="Jpp-00-AgL" secondAttribute="bottom" constant="8" symbolic="YES" id="pUE-vX-8NF"/>
+                            <constraint firstItem="qp8-np-IhZ" firstAttribute="top" secondItem="Uu8-V6-oPc" secondAttribute="bottom" constant="16" id="xWX-EQ-MMA"/>
+                            <constraint firstAttribute="centerY" secondItem="Jpp-00-AgL" secondAttribute="centerY" constant="177.5" id="zge-oL-nzE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="BED-u0-prT"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Nv-pi-RDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1587" y="376"/>
+        </scene>
+        <!--TestSuccessVC-->
+        <scene sceneID="zqj-hU-tiz">
+            <objects>
+                <viewController id="Jem-fd-xGP" userLabel="TestSuccessVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UdF-fW-t0b"/>
+                        <viewControllerLayoutGuide type="bottom" id="joz-vr-ZVY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1A3-6u-elE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-A1-nUE">
+                                <rect key="frame" x="-42" y="-16" width="650" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-Oh-Ccc">
+                                <rect key="frame" x="1" y="72" width="317" height="223"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="317" id="RDb-Kn-pNn"/>
+                                    <constraint firstAttribute="height" constant="223" id="z5O-mJ-FB9"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Good Job!">
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.41176470588235292" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="31" name="AvenirNext-Bold"/>
+                                            <font key="NSOriginalFont" size="27" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.054901960784313725" green="0.41176470588235292" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="27" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Your baby is able to roll">
+                                        <attributes>
+                                            <color key="NSColor" red="0.26666666666666666" green="0.27058823529411763" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="24" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.26666666666666666" green="0.27058823529411763" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="over from front to back.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.26666666666666666" green="0.27058823529411763" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="24" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.26666666666666666" green="0.27058823529411763" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">No need to repeat 
+this test.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHC-RB-iLY">
+                                <rect key="frame" x="96" y="379" width="129" height="43"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="oCt-2g-x4O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next step">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="dHC-RB-iLY" secondAttribute="centerY" constant="-116.5" id="PXV-4Q-8Hs"/>
+                            <constraint firstAttribute="centerX" secondItem="dHC-RB-iLY" secondAttribute="centerX" constant="-0.5" id="akq-55-odY"/>
+                            <constraint firstAttribute="centerX" secondItem="mVM-Oh-Ccc" secondAttribute="centerX" id="iuD-Hd-2sC"/>
+                            <constraint firstAttribute="centerY" secondItem="mVM-Oh-Ccc" secondAttribute="centerY" constant="100" id="u8H-5D-WHl"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcZ-Cq-8YZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2459" y="52"/>
+        </scene>
+        <!--TestFailureVC-->
+        <scene sceneID="20f-Ex-L9s">
+            <objects>
+                <viewController id="l8H-zU-0T0" userLabel="TestFailureVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WYg-Fr-jY8"/>
+                        <viewControllerLayoutGuide type="bottom" id="VUe-fk-ldF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QWP-Xf-m12">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="u2B-NB-AJh">
+                                <rect key="frame" x="-10" y="-23" width="600" height="613"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doesn't roll over?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-hD-WgS">
+                                <rect key="frame" x="57" y="53" width="207" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVX-hc-Tyg">
+                                <rect key="frame" x="16" y="251" width="288" height="151"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="151" id="Ant-Er-YWo"/>
+                                    <constraint firstAttribute="width" constant="301" id="kx7-af-OeW"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.93333333333333335" green="0.33333333333333331" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Not to worry. All babies develop at different">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="23" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="rates.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="23" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <font key="NSOriginalFont" size="26" name="AvenirNext-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Try this test again in a month.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="23" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kx7-af-OeW"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-JY-tKq">
+                                <rect key="frame" x="175" y="410" width="129" height="45"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="vr5-Aj-wMp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next step">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vr5-Aj-wMp"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-dw-d7z">
+                                <rect key="frame" x="26" y="410" width="129" height="45"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="Hhi-Xn-jnt"/>
+                                    <constraint firstAttribute="width" constant="129" id="g8H-z9-qCr"/>
+                                    <constraint firstAttribute="height" constant="45" id="rXg-e7-Zco"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="further info">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hhi-Xn-jnt"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Graph" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-2j-JVX" userLabel="Graph image">
+                                <rect key="frame" x="16" y="94" width="288" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="M8p-br-2Jg"/>
+                                    <constraint firstAttribute="width" constant="368" id="YAy-kA-fRI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YAy-kA-fRI"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pBx-JY-tKq" secondAttribute="trailing" id="0OL-T9-Jnn"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="height" secondItem="FXk-dw-d7z" secondAttribute="height" id="2qg-Ak-EYH"/>
+                            <constraint firstAttribute="centerY" secondItem="ye8-hD-WgS" secondAttribute="centerY" constant="214.5" id="4m8-lc-A3F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bKK-2j-JVX" secondAttribute="trailing" id="7Jw-1L-jqa"/>
+                            <constraint firstItem="hVX-hc-Tyg" firstAttribute="top" secondItem="ye8-hD-WgS" secondAttribute="bottom" constant="8" symbolic="YES" id="9Af-0r-VId"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pBx-JY-tKq" secondAttribute="trailing" id="D0m-AW-ZB2"/>
+                            <constraint firstItem="hVX-hc-Tyg" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" id="Eu5-bf-by8"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="centerY" secondItem="FXk-dw-d7z" secondAttribute="centerY" id="GRS-kZ-bPQ"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="width" secondItem="FXk-dw-d7z" secondAttribute="width" id="Kwn-2n-j3T"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="bottom" secondItem="FXk-dw-d7z" secondAttribute="bottom" id="OyF-Sh-7UF"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="trailing" constant="10" id="P4z-gn-Mnd"/>
+                            <constraint firstItem="bKK-2j-JVX" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" id="PzH-zN-fqR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hVX-hc-Tyg" secondAttribute="trailing" id="QGo-KP-hoP"/>
+                            <constraint firstItem="VUe-fk-ldF" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="bottom" constant="73" id="T0s-kv-6Tp"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="hVX-hc-Tyg" secondAttribute="bottom" constant="8" symbolic="YES" id="WeY-WX-WsT"/>
+                            <constraint firstItem="hVX-hc-Tyg" firstAttribute="top" secondItem="bKK-2j-JVX" secondAttribute="bottom" constant="8" symbolic="YES" id="dQb-UJ-83o"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="hVX-hc-Tyg" secondAttribute="bottom" constant="8" symbolic="YES" id="fXg-Vb-tAf"/>
+                            <constraint firstAttribute="centerX" secondItem="ye8-hD-WgS" secondAttribute="centerX" constant="-0.5" id="hKs-hE-whb"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="trailing" constant="20" id="j7i-Wa-SPl"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="top" id="jup-yx-Jeg"/>
+                            <constraint firstItem="bKK-2j-JVX" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="leading" id="kAS-LF-SNf"/>
+                            <constraint firstItem="FXk-dw-d7z" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" constant="10" id="lTg-fV-iXP"/>
+                            <constraint firstItem="VUe-fk-ldF" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="bottom" constant="100" id="nGp-Ui-odd"/>
+                            <constraint firstItem="bKK-2j-JVX" firstAttribute="top" secondItem="ye8-hD-WgS" secondAttribute="bottom" constant="8" symbolic="YES" id="pjX-W6-FdQ"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="top" id="tgD-qh-ToI"/>
+                            <constraint firstItem="FXk-dw-d7z" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" id="vgp-Aj-kkI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kAS-LF-SNf"/>
+                                <exclude reference="9Af-0r-VId"/>
+                                <exclude reference="vgp-Aj-kkI"/>
+                                <exclude reference="P4z-gn-Mnd"/>
+                                <exclude reference="D0m-AW-ZB2"/>
+                                <exclude reference="0OL-T9-Jnn"/>
+                                <exclude reference="GRS-kZ-bPQ"/>
+                                <exclude reference="OyF-Sh-7UF"/>
+                                <exclude reference="fXg-Vb-tAf"/>
+                                <exclude reference="tgD-qh-ToI"/>
+                                <exclude reference="nGp-Ui-odd"/>
+                                <exclude reference="T0s-kv-6Tp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZXX-dx-rzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="723"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S1s-K2-XzA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dzA-Pk-nqV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rv2-sE-wMe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7HQ-ZT-4GJ" kind="relationship" relationship="rootViewController" id="t0u-Dr-85f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IG-yr-FbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="376"/>
+        </scene>
+        <!--TestStepsVC-->
+        <scene sceneID="AEu-ll-KLo">
+            <objects>
+                <viewController id="rXB-Qx-idc" userLabel="TestStepsVC" customClass="TestStepsViewController" customModule="BabyNoggin_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MHC-Xc-WVp"/>
+                        <viewControllerLayoutGuide type="bottom" id="SEh-eZ-Skc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uvW-T9-leR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="3x7-wO-wFe">
+                                <rect key="frame" x="-26" y="-13" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What did you see?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFC-xg-av2">
+                                <rect key="frame" x="53" y="90" width="215" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="n7D-Uo-xOk">
+                                <rect key="frame" x="10" y="147" width="300" height="240"/>
+                                <color key="backgroundColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="testSteps" rowHeight="70" id="feu-L6-cY8" customClass="TestStepsTableViewCell" customModule="BabyNoggin_Demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="471" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="feu-L6-cY8" id="EsG-q0-JYq">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGR-vr-pYn">
+                                                    <rect key="frame" x="8" y="18" width="284" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                    <color key="textColor" red="0.27450980390000002" green="0.2784313725" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="fGR-vr-pYn" secondAttribute="centerX" id="Gdc-R2-JKa"/>
+                                                <constraint firstItem="fGR-vr-pYn" firstAttribute="leading" secondItem="EsG-q0-JYq" secondAttribute="leadingMargin" id="O2V-g3-jBy"/>
+                                                <constraint firstAttribute="centerY" secondItem="fGR-vr-pYn" secondAttribute="centerY" id="QXh-5F-atk"/>
+                                                <constraint firstItem="fGR-vr-pYn" firstAttribute="top" secondItem="EsG-q0-JYq" secondAttribute="topMargin" constant="10" id="cxl-US-BpH"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fGR-vr-pYn" secondAttribute="trailing" id="oql-tn-nag"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="QXh-5F-atk"/>
+                                                    <exclude reference="Gdc-R2-JKa"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="testStepLabel" destination="fGR-vr-pYn" id="DKA-9m-aoD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rXB-Qx-idc" id="v35-j7-liC"/>
+                                    <outlet property="delegate" destination="rXB-Qx-idc" id="wJs-OW-OZA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="EFC-xg-av2" secondAttribute="centerY" constant="177.5" id="12t-mY-Dwk"/>
+                            <constraint firstAttribute="centerX" secondItem="EFC-xg-av2" secondAttribute="centerX" constant="-0.5" id="2UW-xB-c5W"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="HXN-Us-0Ht"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="n7D-Uo-xOk" id="Grj-vm-qiz"/>
+                        <segue destination="l8H-zU-0T0" kind="show" identifier="testFailure" id="dMY-xX-a1D"/>
+                        <segue destination="Jem-fd-xGP" kind="show" identifier="testSuccess" id="HDn-QQ-1Rh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxr-6t-nBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="376"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="320" height="568"/>
+        <image name="Graph" width="323" height="125"/>
+        <image name="LeftArrow" width="24" height="24"/>
+    </resources>
 </document>
