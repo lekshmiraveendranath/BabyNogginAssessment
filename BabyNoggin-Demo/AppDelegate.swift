@@ -22,10 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
         
+        // To make navigation bar transparent
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().translucent = true
         
+        // To make tool bar transparent
         UIToolbar.appearance().setBackgroundImage(UIImage(), forToolbarPosition: .Any, barMetrics: UIBarMetrics.Default)
         UIToolbar.appearance().translucent = true
     }

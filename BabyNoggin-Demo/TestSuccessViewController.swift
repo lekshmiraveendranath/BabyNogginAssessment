@@ -13,19 +13,16 @@ class TestSuccessViewController: UIViewController {
     var bnTest:BabyDevelopmentTest?
     @IBOutlet weak var testSuccessLabel: UILabel!
 
+     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         if let bnTest = bnTest {
             self.navigationItem.title = bnTest.name
-            let overViewColor = UIColor(red: (70/255.0), green: (71/255.0), blue: (73/255.0), alpha: 1)
-            var attributedString = NSAttributedString(string: bnTest.successMessage, attributes: [NSForegroundColorAttributeName : overViewColor,
-                NSFontAttributeName: UIFont(name: "Avenir Next Demi Bold", size: 24)!])
-            self.testSuccessLabel.attributedText = attributedString
+            self.testSuccessLabel.attributedText = setAttributedtext(bnTest.successMessage)
         }
     }
     
+    // MARK: - User Methods
     @IBAction func backBtnPressed(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
     }

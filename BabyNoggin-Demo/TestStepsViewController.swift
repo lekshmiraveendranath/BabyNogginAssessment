@@ -13,7 +13,7 @@ class TestStepsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var bnTest:BabyDevelopmentTest?
     
-    
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
@@ -36,6 +36,7 @@ class TestStepsViewController: UIViewController {
         return cell
     }
     
+     // MARK: - Table view Delegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.row == 0 {
             self.performSegueWithIdentifier("testSuccess", sender: self)
@@ -44,17 +45,20 @@ class TestStepsViewController: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "testSuccess" {
-            var testSuccessController = segue.destinationViewController as! TestSuccessViewController
-            testSuccessController.bnTest = bnTest
-        } else  if segue.identifier == "testFailure" {
-            var testfailController = segue.destinationViewController as! TestFailViewController
-            testfailController.bnTest = bnTest
-        }
-    }
-    
+
+    // MARK: - User Methods
     @IBAction func backBtnPressed(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "testSuccess" {
+            let testSuccessController = segue.destinationViewController as! TestSuccessViewController
+            testSuccessController.bnTest = bnTest
+        } else  if segue.identifier == "testFailure" {
+            let testfailController = segue.destinationViewController as! TestFailViewController
+            testfailController.bnTest = bnTest
+        }
     }
 }

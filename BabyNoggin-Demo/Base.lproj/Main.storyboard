@@ -32,17 +32,23 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="qNR-RK-RgK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <state key="normal" title="next step">
                                     <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="Q6s-1P-Jqt" kind="show" identifier="testOverview" id="FUd-KR-viz"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3xE-cR-ERy">
-                                <rect key="frame" x="0.0" y="516" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="509" width="320" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem image="Baby" id="gYR-lp-px8">
@@ -110,11 +116,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="eMh-cS-t1w"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <state key="normal" title="next step">
                                     <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="rXB-Qx-idc" kind="show" identifier="testSteps" id="lhZ-s9-yDv"/>
                                 </connections>
@@ -140,6 +152,26 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PyU-kZ-ybt">
+                                <rect key="frame" x="0.0" y="508" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="Baby" id="FZT-7g-TMK">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="gBl-36-Xq0"/>
+                                    <barButtonItem image="List" id="CIj-jn-WfV">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="iRS-qj-v0P"/>
+                                    <barButtonItem image="Book" id="H2P-az-2p5">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="U6X-Ej-iCw"/>
+                                    <barButtonItem image="Settings" id="ZNJ-Mg-2r5">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -154,7 +186,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="BED-u0-prT">
+                    <navigationItem key="navigationItem" id="BED-u0-prT">
                         <barButtonItem key="leftBarButtonItem" image="Back" id="qox-rs-mIY">
                             <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -212,19 +244,30 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHC-RB-iLY">
-                                <rect key="frame" x="96" y="379" width="129" height="43"/>
+                                <rect key="frame" x="96" y="343" width="129" height="43"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="oCt-2g-x4O"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                <state key="normal" title="next step">
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next test">
                                     <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskstoBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-4o-JNN">
+                                <rect key="frame" x="16" y="173" width="288" height="88"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-dD-ieb">
-                                <rect key="frame" x="30" y="286" width="264" height="66"/>
+                                <rect key="frame" x="40" y="269" width="264" height="66"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">No need to repeat 
@@ -238,26 +281,49 @@ this test.</string>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-4o-JNN">
-                                <rect key="frame" x="30" y="173" width="264" height="85"/>
-                                <attributedString key="attributedText"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UCu-dB-frh">
+                                <rect key="frame" x="0.0" y="508" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="Baby" id="jxt-mD-f7A">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="T2Y-Xh-zgE"/>
+                                    <barButtonItem image="List" id="1SO-Ff-WWP">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UNq-t5-L1n"/>
+                                    <barButtonItem image="Book" id="Whh-1V-6m9">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="z7X-TG-ove"/>
+                                    <barButtonItem image="Settings" id="hdO-Gy-pk1">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="gRS-dD-ieb" firstAttribute="leading" secondItem="1A3-6u-elE" secondAttribute="leadingMargin" constant="14" id="4yh-Ws-LiQ"/>
+                            <constraint firstItem="gRS-dD-ieb" firstAttribute="leading" secondItem="1A3-6u-elE" secondAttribute="leadingMargin" constant="24" id="4yh-Ws-LiQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U7E-4o-JNN" secondAttribute="trailing" id="7gm-ee-SfA"/>
                             <constraint firstItem="gRS-dD-ieb" firstAttribute="trailing" secondItem="U7E-4o-JNN" secondAttribute="trailing" id="JS6-4N-ZfH"/>
-                            <constraint firstAttribute="centerY" secondItem="dHC-RB-iLY" secondAttribute="centerY" constant="-116.5" id="PXV-4Q-8Hs"/>
+                            <constraint firstAttribute="centerY" secondItem="dHC-RB-iLY" secondAttribute="centerY" constant="-80.5" id="PXV-4Q-8Hs"/>
                             <constraint firstAttribute="centerX" secondItem="dHC-RB-iLY" secondAttribute="centerX" constant="-0.5" id="akq-55-odY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gRS-dD-ieb" secondAttribute="trailing" constant="10" id="gQo-GK-x8Z"/>
+                            <constraint firstItem="U7E-4o-JNN" firstAttribute="leading" secondItem="1A3-6u-elE" secondAttribute="leadingMargin" id="g0V-1c-vBp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gRS-dD-ieb" secondAttribute="trailing" id="gQo-GK-x8Z"/>
                             <constraint firstAttribute="centerX" secondItem="mVM-Oh-Ccc" secondAttribute="centerX" id="iuD-Hd-2sC"/>
-                            <constraint firstItem="gRS-dD-ieb" firstAttribute="centerY" secondItem="U7E-4o-JNN" secondAttribute="centerY" constant="103.5" id="lwE-On-HrE"/>
+                            <constraint firstItem="gRS-dD-ieb" firstAttribute="centerY" secondItem="U7E-4o-JNN" secondAttribute="centerY" constant="85" id="lwE-On-HrE"/>
                             <constraint firstItem="U7E-4o-JNN" firstAttribute="top" secondItem="mVM-Oh-Ccc" secondAttribute="bottom" constant="8" symbolic="YES" id="peX-Qc-864"/>
-                            <constraint firstItem="gRS-dD-ieb" firstAttribute="height" secondItem="U7E-4o-JNN" secondAttribute="height" constant="-19" id="rgx-im-gzX"/>
+                            <constraint firstItem="gRS-dD-ieb" firstAttribute="height" secondItem="U7E-4o-JNN" secondAttribute="height" constant="-22" id="rgx-im-gzX"/>
                             <constraint firstAttribute="centerY" secondItem="mVM-Oh-Ccc" secondAttribute="centerY" constant="139.75" id="u8H-5D-WHl"/>
                             <constraint firstItem="gRS-dD-ieb" firstAttribute="leading" secondItem="U7E-4o-JNN" secondAttribute="leading" id="w6j-g9-UEa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="JS6-4N-ZfH"/>
+                                <exclude reference="w6j-g9-UEa"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="BJr-cX-WBb">
                         <barButtonItem key="leftBarButtonItem" image="Back" id="HTl-er-cVt">
@@ -288,70 +354,10 @@ this test.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="u2B-NB-AJh">
-                                <rect key="frame" x="-10" y="-23" width="600" height="613"/>
+                                <rect key="frame" x="-10" y="-20" width="600" height="613"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doesn't roll over?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-hD-WgS">
-                                <rect key="frame" x="57" y="53" width="207" height="33"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-JY-tKq">
-                                <rect key="frame" x="175" y="415" width="129" height="45"/>
-                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="vr5-Aj-wMp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                <state key="normal" title="next step">
-                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="vr5-Aj-wMp"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-dw-d7z">
-                                <rect key="frame" x="26" y="415" width="129" height="45"/>
-                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="Hhi-Xn-jnt"/>
-                                    <constraint firstAttribute="width" constant="129" id="g8H-z9-qCr"/>
-                                    <constraint firstAttribute="height" constant="45" id="rXg-e7-Zco"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                <state key="normal" title="further info">
-                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Hhi-Xn-jnt"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RollingGraph" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-2j-JVX" userLabel="Graph image">
-                                <rect key="frame" x="16" y="94" width="288" height="149"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="M8p-br-2Jg"/>
-                                    <constraint firstAttribute="width" constant="368" id="YAy-kA-fRI"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="YAy-kA-fRI"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-9g-DH5">
-                                <rect key="frame" x="16" y="273" width="288" height="63"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVX-hc-Tyg">
-                                <rect key="frame" x="16" y="344" width="288" height="63"/>
+                                <rect key="frame" x="16" y="336" width="288" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="151" id="Ant-Er-YWo"/>
                                     <constraint firstAttribute="width" constant="301" id="kx7-af-OeW"/>
@@ -373,13 +379,113 @@ this test.</string>
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-JY-tKq">
+                                <rect key="frame" x="176" y="407" width="129" height="45"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="vr5-Aj-wMp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next test">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vr5-Aj-wMp"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-dw-d7z">
+                                <rect key="frame" x="26" y="407" width="129" height="45"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="Hhi-Xn-jnt"/>
+                                    <constraint firstAttribute="width" constant="129" id="g8H-z9-qCr"/>
+                                    <constraint firstAttribute="height" constant="45" id="rXg-e7-Zco"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="further info">
+                                    <color key="titleColor" red="0.054901960784313725" green="0.41176470588235292" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hhi-Xn-jnt"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RollingGraph" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-2j-JVX" userLabel="Graph image">
+                                <rect key="frame" x="16" y="94" width="288" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="129" id="M8p-br-2Jg"/>
+                                    <constraint firstAttribute="width" constant="368" id="YAy-kA-fRI"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="YAy-kA-fRI"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-9g-DH5">
+                                <rect key="frame" x="16" y="243" width="288" height="85"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DR4-5b-WKg">
+                                <rect key="frame" x="0.0" y="516" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="Baby" id="Ilv-i6-pEd">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="xfg-g3-vxy"/>
+                                    <barButtonItem image="List" id="h4m-PA-6sH">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="UM5-P7-ltG"/>
+                                    <barButtonItem image="Book" id="BUO-WM-102">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="NRb-Au-DpL"/>
+                                    <barButtonItem image="Settings" id="eU0-pc-iJt">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Doesn't roll over?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ye8-hD-WgS">
+                                <rect key="frame" x="57" y="60" width="207" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="pBx-JY-tKq" secondAttribute="trailing" id="0OL-T9-Jnn"/>
+                            <constraint firstItem="VqF-9g-DH5" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" id="0sP-jD-VUZ"/>
                             <constraint firstItem="pBx-JY-tKq" firstAttribute="height" secondItem="FXk-dw-d7z" secondAttribute="height" id="2qg-Ak-EYH"/>
-                            <constraint firstAttribute="centerY" secondItem="ye8-hD-WgS" secondAttribute="centerY" constant="214.5" id="4m8-lc-A3F"/>
-                            <constraint firstItem="VqF-9g-DH5" firstAttribute="top" secondItem="bKK-2j-JVX" secondAttribute="bottom" constant="30" id="7A0-tG-0sI"/>
+                            <constraint firstAttribute="centerY" secondItem="ye8-hD-WgS" secondAttribute="centerY" constant="207.5" id="4m8-lc-A3F"/>
+                            <constraint firstItem="VqF-9g-DH5" firstAttribute="top" secondItem="bKK-2j-JVX" secondAttribute="bottom" constant="20" id="7A0-tG-0sI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bKK-2j-JVX" secondAttribute="trailing" id="7Jw-1L-jqa"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="top" secondItem="ye8-hD-WgS" secondAttribute="bottom" constant="8" symbolic="YES" id="9Af-0r-VId"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pBx-JY-tKq" secondAttribute="trailing" id="D0m-AW-ZB2"/>
@@ -394,25 +500,28 @@ this test.</string>
                             <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="hVX-hc-Tyg" secondAttribute="bottom" constant="8" symbolic="YES" id="WeY-WX-WsT"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="top" secondItem="bKK-2j-JVX" secondAttribute="bottom" constant="8" symbolic="YES" id="dQb-UJ-83o"/>
                             <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="hVX-hc-Tyg" secondAttribute="bottom" constant="8" symbolic="YES" id="fXg-Vb-tAf"/>
-                            <constraint firstItem="hVX-hc-Tyg" firstAttribute="height" secondItem="VqF-9g-DH5" secondAttribute="height" id="g8a-ys-l8A"/>
+                            <constraint firstItem="hVX-hc-Tyg" firstAttribute="height" secondItem="VqF-9g-DH5" secondAttribute="height" constant="-22" id="g8a-ys-l8A"/>
                             <constraint firstAttribute="centerX" secondItem="ye8-hD-WgS" secondAttribute="centerX" constant="-0.5" id="hKs-hE-whb"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="leading" secondItem="VqF-9g-DH5" secondAttribute="leading" id="iwi-Pt-PRb"/>
-                            <constraint firstItem="pBx-JY-tKq" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="trailing" constant="20" id="j7i-Wa-SPl"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="trailing" constant="21" id="j7i-Wa-SPl"/>
                             <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="top" id="jup-yx-Jeg"/>
                             <constraint firstItem="bKK-2j-JVX" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="leading" id="kAS-LF-SNf"/>
                             <constraint firstItem="FXk-dw-d7z" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" constant="10" id="lTg-fV-iXP"/>
                             <constraint firstItem="VUe-fk-ldF" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="bottom" constant="100" id="nGp-Ui-odd"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="trailing" secondItem="VqF-9g-DH5" secondAttribute="trailing" id="owQ-Jh-e7B"/>
-                            <constraint firstItem="bKK-2j-JVX" firstAttribute="top" secondItem="ye8-hD-WgS" secondAttribute="bottom" constant="8" symbolic="YES" id="pjX-W6-FdQ"/>
+                            <constraint firstItem="bKK-2j-JVX" firstAttribute="top" secondItem="ye8-hD-WgS" secondAttribute="bottom" constant="1" id="pjX-W6-FdQ"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="top" secondItem="VqF-9g-DH5" secondAttribute="bottom" constant="8" symbolic="YES" id="sov-mp-fhW"/>
                             <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="top" id="tgD-qh-ToI"/>
                             <constraint firstItem="FXk-dw-d7z" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" id="vgp-Aj-kkI"/>
+                            <constraint firstItem="VqF-9g-DH5" firstAttribute="trailing" secondItem="QWP-Xf-m12" secondAttribute="trailingMargin" id="vlx-Fj-D8u"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="kAS-LF-SNf"/>
                                 <exclude reference="9Af-0r-VId"/>
                                 <exclude reference="dQb-UJ-83o"/>
+                                <exclude reference="iwi-Pt-PRb"/>
+                                <exclude reference="owQ-Jh-e7B"/>
                                 <exclude reference="vgp-Aj-kkI"/>
                                 <exclude reference="0OL-T9-Jnn"/>
                                 <exclude reference="D0m-AW-ZB2"/>
@@ -487,16 +596,16 @@ this test.</string>
                                 <rect key="frame" x="0.0" y="123" width="320" height="385"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="testSteps" rowHeight="100" id="feu-L6-cY8" customClass="TestStepsTableViewCell" customModule="BabyNoggin_Demo" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="testSteps" rowHeight="85" id="feu-L6-cY8" customClass="TestStepsTableViewCell" customModule="BabyNoggin_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="471" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="feu-L6-cY8" id="EsG-q0-JYq">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGR-vr-pYn">
-                                                    <rect key="frame" x="25" y="7" width="270" height="86"/>
+                                                    <rect key="frame" x="25" y="7" width="270" height="63"/>
                                                     <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                     <color key="textColor" red="0.27450980390000002" green="0.2784313725" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
@@ -511,7 +620,7 @@ this test.</string>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="fGR-vr-pYn" secondAttribute="centerX" id="Gdc-R2-JKa"/>
                                                 <constraint firstAttribute="centerY" secondItem="fGR-vr-pYn" secondAttribute="centerY" id="QXh-5F-atk"/>
-                                                <constraint firstAttribute="bottom" secondItem="fGR-vr-pYn" secondAttribute="bottom" constant="7" id="Wum-SW-uJ1"/>
+                                                <constraint firstAttribute="bottom" secondItem="fGR-vr-pYn" secondAttribute="bottom" constant="15" id="Wum-SW-uJ1"/>
                                                 <constraint firstItem="fGR-vr-pYn" firstAttribute="leading" secondItem="EsG-q0-JYq" secondAttribute="leading" constant="25" id="b4A-or-7iz"/>
                                                 <constraint firstItem="fGR-vr-pYn" firstAttribute="top" secondItem="EsG-q0-JYq" secondAttribute="top" constant="7" id="d4O-TO-vQj"/>
                                                 <constraint firstAttribute="trailing" secondItem="fGR-vr-pYn" secondAttribute="trailing" constant="25" id="mV9-Ti-HPq"/>
@@ -534,6 +643,26 @@ this test.</string>
                                     <outlet property="delegate" destination="rXB-Qx-idc" id="wJs-OW-OZA"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jvq-Zb-jfP">
+                                <rect key="frame" x="0.0" y="508" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem image="Baby" id="fnl-Hh-Aob">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FqF-kg-tGW"/>
+                                    <barButtonItem image="List" id="aXm-U2-7JE">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="MTM-8T-Drp"/>
+                                    <barButtonItem image="Book" id="1EW-dK-BmL">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ooS-ex-Jdx"/>
+                                    <barButtonItem image="Settings" id="gBa-wX-LPL">
+                                        <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -546,7 +675,7 @@ this test.</string>
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="HXN-Us-0Ht">
+                    <navigationItem key="navigationItem" id="HXN-Us-0Ht">
                         <barButtonItem key="leftBarButtonItem" image="Back" id="NCb-hl-BVY">
                             <color key="tintColor" red="0.64705882349999999" green="0.87843137250000003" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

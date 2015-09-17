@@ -15,7 +15,6 @@ class MediaPlaybackViewController: UIViewController {
     let rollingTest = BabyDevelopmentTest.mockSingleTest()
     
     // MARK: - View Lifecycle Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,8 +24,7 @@ class MediaPlaybackViewController: UIViewController {
         playVideo()
     }
     
-     // MARK: - User Methods
-    
+    // MARK: - User Methods
     func playVideo() {
         self.moviePlayer = MPMoviePlayerController(contentURL: rollingTest.videoUrl)
         if let player = self.moviePlayer {
@@ -37,16 +35,15 @@ class MediaPlaybackViewController: UIViewController {
             player.prepareToPlay()
             player.play()
         } else {
-            println("Something went wrong")
+            print("Something went wrong")
         }
     }
     
-     // MARK: - Navigation
-    
+    // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "testOverview" {
             self.moviePlayer?.stop()
-            var testStepsController = segue.destinationViewController as! TestOverviewViewController
+            let testStepsController = segue.destinationViewController as! TestOverviewViewController
             testStepsController.bnTest = self.rollingTest
         }
     }
