@@ -26,5 +26,9 @@ class TestFailViewController: UIViewController {
         }
 
     }
+    
+    @IBAction func backBtnPressed(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 
 }

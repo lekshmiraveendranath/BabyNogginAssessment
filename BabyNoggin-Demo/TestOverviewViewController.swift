@@ -13,6 +13,8 @@ class TestOverviewViewController: UIViewController {
     @IBOutlet weak var testOverviewLabel: UILabel!
     var bnTest:BabyDevelopmentTest?
     
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +27,14 @@ class TestOverviewViewController: UIViewController {
             self.testOverviewLabel.attributedText = attributedString
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+     // MARK: - User Methods
+    
+    @IBAction func backBtnPressed(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
     }
+    
+     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "testSteps"{
@@ -37,4 +42,5 @@ class TestOverviewViewController: UIViewController {
             testStepController.bnTest = bnTest
         }
     }
+    
 }

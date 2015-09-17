@@ -19,14 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupAppearance() {
-        UINavigationBar.appearance().backgroundColor = UIColor.clearColor()
-        UINavigationBar.appearance().tintColor = UIColor.clearColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
             NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
         
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().translucent = true
+        
+        UIToolbar.appearance().setBackgroundImage(UIImage(), forToolbarPosition: .Any, barMetrics: UIBarMetrics.Default)
+        UIToolbar.appearance().translucent = true
     }
     
 }

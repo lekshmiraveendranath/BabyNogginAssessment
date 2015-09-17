@@ -40,7 +40,7 @@ extension BabyDevelopmentTest {
         
         let name = "rolling front to back"
         let overview = "1) Place the baby on her stomach on a firm surface.\n2) See if baby rolls over onto her back."
-        let testSteps = ["Baby is able to turn shoulders and roll over.","Baby is unable to lift body up with arms.","Baby moves arms","Baby does not move arms."]
+        let testSteps = ["Baby is able to turn shoulders and roll over.","Baby is unable to lift body up with arms.","Baby moves arms.","Baby does not move arms."]
         let successMsg = "Your baby is able to roll over from front to back."
         let failureMsg = "All babies develop at different rates."
         

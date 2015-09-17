@@ -13,10 +13,15 @@ class MediaPlaybackViewController: UIViewController {
     
     var moviePlayer: MPMoviePlayerController?
     let rollingTest = BabyDevelopmentTest.mockSingleTest()
+    
     // MARK: - View Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
         playVideo()
     }
     
@@ -35,6 +40,8 @@ class MediaPlaybackViewController: UIViewController {
             println("Something went wrong")
         }
     }
+    
+     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "testOverview" {

@@ -53,4 +53,8 @@ class TestStepsViewController: UIViewController {
             testfailController.bnTest = bnTest
         }
     }
+    
+    @IBAction func backBtnPressed(sender: UIBarButtonItem) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }
