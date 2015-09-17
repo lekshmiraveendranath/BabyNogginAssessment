@@ -16,6 +16,10 @@
 		71B6C8DA1BAA5524001298F4 /* TestStepsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6C8D41BAA5524001298F4 /* TestStepsTableViewCell.swift */; };
 		71B6C8DB1BAA5524001298F4 /* TestStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6C8D51BAA5524001298F4 /* TestStepsViewController.swift */; };
 		71B6C8DD1BAA55D3001298F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71B6C8DC1BAA55D3001298F4 /* Assets.xcassets */; };
+		71B6C8E31BAA6C04001298F4 /* TestOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6C8E21BAA6C04001298F4 /* TestOverviewViewController.swift */; };
+		71B6C8E51BAA707F001298F4 /* TestSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6C8E41BAA707F001298F4 /* TestSuccessViewController.swift */; };
+		71B6C8E71BAA7090001298F4 /* TestFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6C8E61BAA7090001298F4 /* TestFailViewController.swift */; };
+		71B6C8E91BAA76AB001298F4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6C8E81BAA76AB001298F4 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		71B6C8D41BAA5524001298F4 /* TestStepsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStepsTableViewCell.swift; sourceTree = "<group>"; };
 		71B6C8D51BAA5524001298F4 /* TestStepsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestStepsViewController.swift; sourceTree = "<group>"; };
 		71B6C8DC1BAA55D3001298F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		71B6C8E21BAA6C04001298F4 /* TestOverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestOverviewViewController.swift; sourceTree = "<group>"; };
+		71B6C8E41BAA707F001298F4 /* TestSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSuccessViewController.swift; sourceTree = "<group>"; };
+		71B6C8E61BAA7090001298F4 /* TestFailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFailViewController.swift; sourceTree = "<group>"; };
+		71B6C8E81BAA76AB001298F4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				71B6C8D31BAA5524001298F4 /* MediaPlaybackViewController.swift */,
+				71B6C8E21BAA6C04001298F4 /* TestOverviewViewController.swift */,
 				71B6C8D51BAA5524001298F4 /* TestStepsViewController.swift */,
+				71B6C8E41BAA707F001298F4 /* TestSuccessViewController.swift */,
+				71B6C8E61BAA7090001298F4 /* TestFailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				71B6C8D01BAA5524001298F4 /* AppDelegate.swift */,
+				71B6C8E81BAA76AB001298F4 /* Constants.swift */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -255,9 +267,13 @@
 			files = (
 				71B6C8DB1BAA5524001298F4 /* TestStepsViewController.swift in Sources */,
 				71B6C8D91BAA5524001298F4 /* MediaPlaybackViewController.swift in Sources */,
+				71B6C8E71BAA7090001298F4 /* TestFailViewController.swift in Sources */,
 				71B6C8DA1BAA5524001298F4 /* TestStepsTableViewCell.swift in Sources */,
+				71B6C8E51BAA707F001298F4 /* TestSuccessViewController.swift in Sources */,
 				71B6C8D61BAA5524001298F4 /* AppDelegate.swift in Sources */,
+				71B6C8E31BAA6C04001298F4 /* TestOverviewViewController.swift in Sources */,
 				71B6C8D81BAA5524001298F4 /* BabyDevelopmentTest.swift in Sources */,
+				71B6C8E91BAA76AB001298F4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +466,7 @@
 				71B6C8CC1BAA54C0001298F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71B6C8CD1BAA54C0001298F4 /* Build configuration list for PBXNativeTarget "BabyNoggin-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +475,7 @@
 				71B6C8CF1BAA54C0001298F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

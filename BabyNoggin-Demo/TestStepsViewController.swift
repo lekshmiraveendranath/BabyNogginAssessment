@@ -11,22 +11,27 @@ import UIKit
 class TestStepsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    var bnTest:BabyDevelopmentTest?
     
-    var testQuestionsArray = ["Baby is able to turn shoulders and roll over.","Baby is unable to lift body up with arms.","Baby moves arms","Baby does not move arms."]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        self.navigationItem.title = bnTest!.name
     }
     
     // MARK: - Table view data source
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testQuestionsArray.count
+        if let bnTest = bnTest {
+            return bnTest.steps.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("testSteps", forIndexPath: indexPath) as! TestStepsTableViewCell
-        cell.testStepLabel.text = testQuestionsArray[indexPath.row]
+        cell.testStepLabel.text = bnTest?.steps[indexPath.row]
         
         return cell
     }
@@ -39,4 +44,13 @@ class TestStepsViewController: UIViewController {
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "testSuccess" {
+            var testSuccessController = segue.destinationViewController as! TestSuccessViewController
+            testSuccessController.bnTest = bnTest
+        } else  if segue.identifier == "testFailure" {
+            var testfailController = segue.destinationViewController as! TestFailViewController
+            testfailController.bnTest = bnTest
+        }
+    }
 }
