@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupAppearance() {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor(),
-            NSFontAttributeName: UIFont(name: "Avenir Next", size: 20)!]
+            NSFontAttributeName:  UIFont.boldSystemFontOfSize(24)]
         
         // To make navigation bar transparent
         UINavigationBar.appearance().setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)

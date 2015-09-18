@@ -1,5 +1,5 @@
 //
-//  TestStepsViewController.swift
+//  TestResultsViewController.swift
 //  BabyNoggin_Sampler
 //
 //  Created by Lekshmi Raveendranathapanicker on 9/16/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestStepsViewController: UIViewController {
+class TestResultsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     var bnTest:BabyDevelopmentTest?
@@ -30,7 +30,7 @@ class TestStepsViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("testSteps", forIndexPath: indexPath) as! TestStepsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(testResultCellIdentifier, forIndexPath: indexPath) as! TestStepsTableViewCell
         cell.testStepLabel.text = bnTest?.steps[indexPath.row]
         
         return cell
@@ -38,10 +38,10 @@ class TestStepsViewController: UIViewController {
     
      // MARK: - Table view Delegate
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
-            self.performSegueWithIdentifier("testSuccess", sender: self)
-        } else if indexPath.row == 1 {
-            self.performSegueWithIdentifier("testFailure", sender: self)
+        if indexPath.row == 0 || indexPath.row == 2 {
+            self.performSegueWithIdentifier(segueSuccessIdentifier, sender: self)
+        } else if indexPath.row == 1 || indexPath.row == 3 {
+            self.performSegueWithIdentifier(segueFailureIdentifier, sender: self)
         }
     }
     
@@ -53,10 +53,10 @@ class TestStepsViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "testSuccess" {
+        if segue.identifier == segueSuccessIdentifier {
             let testSuccessController = segue.destinationViewController as! TestSuccessViewController
             testSuccessController.bnTest = bnTest
-        } else  if segue.identifier == "testFailure" {
+        } else  if segue.identifier == segueFailureIdentifier {
             let testfailController = segue.destinationViewController as! TestFailViewController
             testfailController.bnTest = bnTest
         }

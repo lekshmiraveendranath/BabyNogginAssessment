@@ -22,6 +22,7 @@ class TestOverviewViewController: UIViewController {
         }
     }
     
+
     // MARK: - User Methods
     @IBAction func backBtnPressed(sender: UIBarButtonItem) {
         self.navigationController?.popViewControllerAnimated(true)
@@ -29,8 +30,8 @@ class TestOverviewViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "testSteps"{
-            let testStepController = segue.destinationViewController as! TestStepsViewController
+        if segue.identifier == segueResultsIdentifier {
+            let testStepController = segue.destinationViewController as! TestResultsViewController
             testStepController.bnTest = bnTest
         }
     }
