@@ -21,7 +21,7 @@ func setAttributedtextOverview (displayText: [String]) -> NSAttributedString {
     paraStyle.lineSpacing = 2.0
     
     //Define Attributes
-    let attributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(24),
+    let attributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(22),
         NSForegroundColorAttributeName : overViewColor,
         NSParagraphStyleAttributeName : paraStyle
     ]
@@ -40,13 +40,14 @@ func setAttributedtext (displayText: String) -> NSAttributedString {
     
     // Define paragraph styling
     let paraStyle = NSMutableParagraphStyle()
-    paraStyle.firstLineHeadIndent = 10.0
-    paraStyle.headIndent = 5.0
+    paraStyle.firstLineHeadIndent = 20.0
+    paraStyle.headIndent = 20.0
+    paraStyle.tailIndent = -20.0
     
     //Define Attributes
-    let attributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(24),
+    let attributes = [NSFontAttributeName : UIFont.boldSystemFontOfSize(22),
         NSForegroundColorAttributeName : overViewColor,
-        NSParagraphStyleAttributeName : paraStyle
+        NSParagraphStyleAttributeName : paraStyle,
     ]
     
     let attributedString = NSAttributedString(string: displayText, attributes: attributes)

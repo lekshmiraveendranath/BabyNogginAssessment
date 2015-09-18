@@ -20,6 +20,7 @@ class TestFailViewController: UIViewController {
         if let bnTest = bnTest {
             self.navigationItem.title = bnTest.name
             self.testFailLabel.attributedText = setAttributedtext(bnTest.failureMessage)
+            self.testFailLabel.textAlignment = .Center
             self.trendImage.image = bnTest.trendImage
         }
     }

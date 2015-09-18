@@ -261,20 +261,15 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-4o-JNN">
-                                <rect key="frame" x="16" y="173" width="288" height="88"/>
-                                <attributedString key="attributedText"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRS-dD-ieb">
-                                <rect key="frame" x="40" y="269" width="264" height="66"/>
+                                <rect key="frame" x="60" y="235" width="199" height="60.5"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">No need to repeat 
 this test.</string>
                                         <attributes>
                                             <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="24" name="AvenirNext-Bold"/>
+                                            <font key="NSFont" size="22" name="AvenirNext-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -302,10 +297,10 @@ this test.</string>
                                 </items>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHC-RB-iLY">
-                                <rect key="frame" x="96" y="355" width="129" height="43"/>
+                                <rect key="frame" x="95" y="320.5" width="130" height="43"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="oCt-2g-x4O"/>
+                                    <constraint firstAttribute="width" constant="130" id="oCt-2g-x4O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
                                 <state key="normal" title="next test">
@@ -319,27 +314,37 @@ this test.</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskstoBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-4o-JNN">
+                                <rect key="frame" x="16" y="165" width="288" height="60.5"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gRS-dD-ieb" firstAttribute="leading" secondItem="1A3-6u-elE" secondAttribute="leadingMargin" constant="24" id="4yh-Ws-LiQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U7E-4o-JNN" secondAttribute="trailing" id="7gm-ee-SfA"/>
+                            <constraint firstAttribute="centerX" secondItem="gRS-dD-ieb" secondAttribute="centerX" id="CBT-Wq-pX2"/>
                             <constraint firstItem="gRS-dD-ieb" firstAttribute="trailing" secondItem="U7E-4o-JNN" secondAttribute="trailing" id="JS6-4N-ZfH"/>
-                            <constraint firstAttribute="centerY" secondItem="dHC-RB-iLY" secondAttribute="centerY" constant="-92.5" id="PXV-4Q-8Hs"/>
-                            <constraint firstAttribute="centerX" secondItem="dHC-RB-iLY" secondAttribute="centerX" constant="-0.5" id="akq-55-odY"/>
+                            <constraint firstAttribute="centerY" secondItem="dHC-RB-iLY" secondAttribute="centerY" constant="-92" id="PXV-4Q-8Hs"/>
+                            <constraint firstAttribute="centerX" secondItem="dHC-RB-iLY" secondAttribute="centerX" id="akq-55-odY"/>
                             <constraint firstItem="U7E-4o-JNN" firstAttribute="leading" secondItem="1A3-6u-elE" secondAttribute="leadingMargin" id="g0V-1c-vBp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gRS-dD-ieb" secondAttribute="trailing" id="gQo-GK-x8Z"/>
                             <constraint firstAttribute="centerX" secondItem="mVM-Oh-Ccc" secondAttribute="centerX" id="iuD-Hd-2sC"/>
-                            <constraint firstItem="gRS-dD-ieb" firstAttribute="centerY" secondItem="U7E-4o-JNN" secondAttribute="centerY" constant="85" id="lwE-On-HrE"/>
-                            <constraint firstItem="U7E-4o-JNN" firstAttribute="top" secondItem="mVM-Oh-Ccc" secondAttribute="bottom" constant="8" symbolic="YES" id="peX-Qc-864"/>
-                            <constraint firstItem="gRS-dD-ieb" firstAttribute="height" secondItem="U7E-4o-JNN" secondAttribute="height" constant="-22" id="rgx-im-gzX"/>
+                            <constraint firstItem="gRS-dD-ieb" firstAttribute="centerY" secondItem="U7E-4o-JNN" secondAttribute="centerY" constant="70" id="lwE-On-HrE"/>
+                            <constraint firstItem="dHC-RB-iLY" firstAttribute="top" secondItem="gRS-dD-ieb" secondAttribute="bottom" constant="25" id="nvf-dJ-pN4"/>
+                            <constraint firstItem="U7E-4o-JNN" firstAttribute="top" secondItem="mVM-Oh-Ccc" secondAttribute="bottom" id="peX-Qc-864"/>
+                            <constraint firstItem="gRS-dD-ieb" firstAttribute="height" secondItem="U7E-4o-JNN" secondAttribute="height" id="rgx-im-gzX"/>
                             <constraint firstAttribute="centerY" secondItem="mVM-Oh-Ccc" secondAttribute="centerY" constant="139.75" id="u8H-5D-WHl"/>
                             <constraint firstItem="gRS-dD-ieb" firstAttribute="leading" secondItem="U7E-4o-JNN" secondAttribute="leading" id="w6j-g9-UEa"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4yh-Ws-LiQ"/>
                                 <exclude reference="JS6-4N-ZfH"/>
+                                <exclude reference="gQo-GK-x8Z"/>
                                 <exclude reference="w6j-g9-UEa"/>
+                                <exclude reference="PXV-4Q-8Hs"/>
                             </mask>
                         </variation>
                     </view>
@@ -375,7 +380,7 @@ this test.</string>
                                 <rect key="frame" x="-10" y="-20" width="600" height="613"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVX-hc-Tyg">
-                                <rect key="frame" x="16" y="336" width="288" height="63"/>
+                                <rect key="frame" x="16" y="333" width="288" height="60.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="151" id="Ant-Er-YWo"/>
                                     <constraint firstAttribute="width" constant="301" id="kx7-af-OeW"/>
@@ -384,7 +389,7 @@ this test.</string>
                                     <fragment content="Try this test again in a month.">
                                         <attributes>
                                             <color key="NSColor" red="0.27450980392156865" green="0.27843137254901962" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="23" name="AvenirNext-Bold"/>
+                                            <font key="NSFont" size="22" name="AvenirNext-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
@@ -397,35 +402,12 @@ this test.</string>
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-JY-tKq">
-                                <rect key="frame" x="176" y="407" width="129" height="45"/>
-                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="vr5-Aj-wMp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                <state key="normal" title="next test">
-                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="vr5-Aj-wMp"/>
-                                    </mask>
-                                </variation>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-dw-d7z">
-                                <rect key="frame" x="26" y="407" width="129" height="45"/>
+                                <rect key="frame" x="16" y="402" width="130" height="45"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="Hhi-Xn-jnt"/>
-                                    <constraint firstAttribute="width" constant="129" id="g8H-z9-qCr"/>
+                                    <constraint firstAttribute="width" constant="130" id="g8H-z9-qCr"/>
                                     <constraint firstAttribute="height" constant="45" id="rXg-e7-Zco"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
@@ -458,13 +440,13 @@ this test.</string>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqF-9g-DH5">
-                                <rect key="frame" x="16" y="243" width="288" height="85"/>
+                                <rect key="frame" x="16" y="243" width="288" height="82.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
                                             <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -496,6 +478,29 @@ this test.</string>
                                 <color key="textColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBx-JY-tKq">
+                                <rect key="frame" x="174" y="402" width="130" height="45"/>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="vr5-Aj-wMp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <state key="normal" title="next test">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.33333333329999998" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vr5-Aj-wMp"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -521,10 +526,10 @@ this test.</string>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="height" secondItem="VqF-9g-DH5" secondAttribute="height" constant="-22" id="g8a-ys-l8A"/>
                             <constraint firstAttribute="centerX" secondItem="ye8-hD-WgS" secondAttribute="centerX" constant="-0.5" id="hKs-hE-whb"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="leading" secondItem="VqF-9g-DH5" secondAttribute="leading" id="iwi-Pt-PRb"/>
-                            <constraint firstItem="pBx-JY-tKq" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="trailing" constant="21" id="j7i-Wa-SPl"/>
+                            <constraint firstItem="pBx-JY-tKq" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="trailing" constant="28" id="j7i-Wa-SPl"/>
                             <constraint firstItem="pBx-JY-tKq" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="top" id="jup-yx-Jeg"/>
                             <constraint firstItem="bKK-2j-JVX" firstAttribute="leading" secondItem="FXk-dw-d7z" secondAttribute="leading" id="kAS-LF-SNf"/>
-                            <constraint firstItem="FXk-dw-d7z" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" constant="10" id="lTg-fV-iXP"/>
+                            <constraint firstItem="FXk-dw-d7z" firstAttribute="leading" secondItem="QWP-Xf-m12" secondAttribute="leadingMargin" id="lTg-fV-iXP"/>
                             <constraint firstItem="VUe-fk-ldF" firstAttribute="top" secondItem="FXk-dw-d7z" secondAttribute="bottom" constant="100" id="nGp-Ui-odd"/>
                             <constraint firstItem="hVX-hc-Tyg" firstAttribute="trailing" secondItem="VqF-9g-DH5" secondAttribute="trailing" id="owQ-Jh-e7B"/>
                             <constraint firstItem="bKK-2j-JVX" firstAttribute="top" secondItem="ye8-hD-WgS" secondAttribute="bottom" constant="1" id="pjX-W6-FdQ"/>
@@ -656,7 +661,7 @@ this test.</string>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGR-vr-pYn">
                                                     <rect key="frame" x="25" y="7" width="270" height="63"/>
                                                     <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                                     <color key="textColor" red="0.27450980390000002" green="0.2784313725" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>

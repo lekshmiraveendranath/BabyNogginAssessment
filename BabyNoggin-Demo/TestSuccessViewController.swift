@@ -19,6 +19,7 @@ class TestSuccessViewController: UIViewController {
         if let bnTest = bnTest {
             self.navigationItem.title = bnTest.name
             self.testSuccessLabel.attributedText = setAttributedtext(bnTest.successMessage)
+            self.testSuccessLabel.textAlignment = .Center
         }
     }
     
