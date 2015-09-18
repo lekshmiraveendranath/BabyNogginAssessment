@@ -10,8 +10,9 @@ import UIKit
 
 class TestFailViewController: UIViewController {
 
-    var bnTest:BabyDevelopmentTest?
+    var bnTest: BabyDevelopmentTest?
     @IBOutlet weak var testFailLabel: UILabel!
+    @IBOutlet weak var trendImage: UIImageView!
     
     // MARK: - View Lifecycle
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class TestFailViewController: UIViewController {
         if let bnTest = bnTest {
             self.navigationItem.title = bnTest.name
             self.testFailLabel.attributedText = setAttributedtext(bnTest.failureMessage)
+            self.trendImage.image = bnTest.trendImage
         }
     }
     

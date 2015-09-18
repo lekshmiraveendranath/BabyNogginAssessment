@@ -12,7 +12,7 @@ import UIKit
 class BabyDevelopmentTest {
     
     let name: String
-    let overview: String
+    let overview: [String]
     let steps: [String]
     let successMessage: String
     let failureMessage: String
@@ -21,7 +21,7 @@ class BabyDevelopmentTest {
     
     // MARK: Instanciation
     // Designated Initializer
-    init(name: String, overview: String, steps: [String], successMessage: String, failureMessage: String, videoUrl: NSURL?, trendImage: UIImage?) {
+    init(name: String, overview: [String], steps: [String], successMessage: String, failureMessage: String, videoUrl: NSURL?, trendImage: UIImage?) {
         self.name = name
         self.overview = overview
         self.steps = steps
@@ -39,7 +39,7 @@ extension BabyDevelopmentTest {
     class func mockSingleTest() -> BabyDevelopmentTest {
         
         let name = "rolling front to back"
-        let overview = "1. Place baby on her stomach on a firm surface.\n2. See if baby rolls over onto her back."
+        let overview = ["1. Place baby on her stomach on a firm surface.","2. See if baby rolls over onto her back."]
         let testSteps = ["Baby is able to turn shoulders and roll over.","Baby is unable to lift body up with arms.","Baby moves arms.","Baby does not move arms."]
         let successMsg = "Your baby is able to roll over from front to back."
         let failureMsg = "Not to worry. All babies develop at different rates."

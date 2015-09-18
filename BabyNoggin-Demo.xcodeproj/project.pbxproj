@@ -151,12 +151,12 @@
 		71B6C8E01BAA56C6001298F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				71B6C8EC1BAB654F001298F4 /* TestStartViewController.swift */,
 				71B6C8D31BAA5524001298F4 /* MediaPlaybackViewController.swift */,
+				71B6C8E61BAA7090001298F4 /* TestFailViewController.swift */,
 				71B6C8E21BAA6C04001298F4 /* TestOverviewViewController.swift */,
 				71B6C8D51BAA5524001298F4 /* TestResultsViewController.swift */,
+				71B6C8EC1BAB654F001298F4 /* TestStartViewController.swift */,
 				71B6C8E41BAA707F001298F4 /* TestSuccessViewController.swift */,
-				71B6C8E61BAA7090001298F4 /* TestFailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

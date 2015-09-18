@@ -114,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp8-np-IhZ">
-                                <rect key="frame" x="108" y="356" width="129" height="45"/>
+                                <rect key="frame" x="95.5" y="356" width="129" height="45"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.95294117649999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="129" id="eMh-cS-t1w"/>
@@ -180,7 +180,7 @@
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Jpp-00-AgL" secondAttribute="centerX" constant="-0.5" id="7DZ-2Y-LyU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Uu8-V6-oPc" secondAttribute="trailing" constant="10" id="fbz-VC-6vq"/>
-                            <constraint firstAttribute="centerX" secondItem="qp8-np-IhZ" secondAttribute="centerX" constant="-12.5" id="g6S-bQ-JXf"/>
+                            <constraint firstAttribute="centerX" secondItem="qp8-np-IhZ" secondAttribute="centerX" id="g6S-bQ-JXf"/>
                             <constraint firstAttribute="centerY" secondItem="qp8-np-IhZ" secondAttribute="centerY" constant="-94.5" id="m4O-PZ-6Xq"/>
                             <constraint firstItem="Uu8-V6-oPc" firstAttribute="leading" secondItem="rqk-tA-vCy" secondAttribute="leadingMargin" constant="10" id="oJV-7J-XRa"/>
                             <constraint firstItem="Uu8-V6-oPc" firstAttribute="top" secondItem="Jpp-00-AgL" secondAttribute="bottom" constant="8" symbolic="YES" id="pUE-vX-8NF"/>
@@ -222,8 +222,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="2hb-A1-nUE">
                                 <rect key="frame" x="-62" y="-16" width="650" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-Oh-Ccc">
-                                <rect key="frame" x="81" y="123" width="158.5" height="42.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVM-Oh-Ccc">
+                                <rect key="frame" x="85" y="123" width="150.5" height="42.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="317" id="RDb-Kn-pNn"/>
                                     <constraint firstAttribute="height" constant="223" id="z5O-mJ-FB9"/>
@@ -357,7 +357,7 @@ this test.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcZ-Cq-8YZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="19"/>
+            <point key="canvasLocation" x="2718" y="-87"/>
         </scene>
         <!--TestFailureVC-->
         <scene sceneID="20f-Ex-L9s">
@@ -445,7 +445,7 @@ this test.</string>
                                     </mask>
                                 </variation>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RollingGraph" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-2j-JVX" userLabel="Graph image">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKK-2j-JVX" userLabel="Graph image">
                                 <rect key="frame" x="16" y="94" width="288" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="129" id="M8p-br-2Jg"/>
@@ -563,11 +563,12 @@ this test.</string>
                     </navigationItem>
                     <connections>
                         <outlet property="testFailLabel" destination="VqF-9g-DH5" id="69R-g3-3di"/>
+                        <outlet property="trendImage" destination="bKK-2j-JVX" id="Lai-LO-F1m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXX-dx-rzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2713" y="753"/>
+            <point key="canvasLocation" x="2713" y="593"/>
         </scene>
         <!--TestStartVC-->
         <scene sceneID="x0E-n6-xIu">
@@ -584,14 +585,8 @@ this test.</string>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zVb-ls-uUY">
                                 <rect key="frame" x="0.0" y="-8" width="320" height="584"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby RollOver Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idJ-Kl-zUj">
-                                <rect key="frame" x="48" y="223" width="220" height="33"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
-                                <color key="textColor" red="0.27450980390000002" green="0.2784313725" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-jw-Abz">
-                                <rect key="frame" x="113.5" y="262.5" width="93" height="43"/>
+                                <rect key="frame" x="113" y="262" width="93" height="43"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
                                 <state key="normal" title="Start Test">
                                     <color key="titleColor" red="0.054901960780000002" green="0.41176470590000003" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -601,6 +596,12 @@ this test.</string>
                                     <segue destination="7HQ-ZT-4GJ" kind="show" id="Bs7-oR-c4e"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baby Rollover Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idJ-Kl-zUj">
+                                <rect key="frame" x="50.5" y="223" width="214.5" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.2784313725" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -770,7 +771,6 @@ this test.</string>
         <image name="Background" width="320" height="568"/>
         <image name="Book" width="22" height="22"/>
         <image name="List" width="22" height="22"/>
-        <image name="RollingGraph" width="323" height="125"/>
         <image name="Settings" width="22" height="22"/>
     </resources>
 </document>

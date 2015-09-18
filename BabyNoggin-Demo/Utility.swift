@@ -11,7 +11,7 @@ import UIKit
 
 //MARK:- Attributedstring Method
 
-func setAttributedtextOverview (displayText: String) -> NSMutableAttributedString {
+func setAttributedtextOverview (displayText: [String]) -> NSAttributedString {
     
     // Define paragraph styling
     let paraStyle = NSMutableParagraphStyle()
@@ -26,10 +26,14 @@ func setAttributedtextOverview (displayText: String) -> NSMutableAttributedStrin
         NSParagraphStyleAttributeName : paraStyle
     ]
     
-    let attributedString = NSMutableAttributedString(string: displayText, attributes: attributes)
-    attributedString.addAttribute(NSForegroundColorAttributeName, value: customRedColor, range: NSRange(location:0,length:2))
-    attributedString.addAttribute(NSForegroundColorAttributeName, value: customRedColor, range: NSRange(location:48,length:2))
-    return attributedString
+    var attributedString = NSMutableAttributedString()
+    for oneLine in displayText {
+        var instruction = NSMutableAttributedString(string: oneLine + "\n", attributes: attributes)
+        instruction.addAttribute(NSForegroundColorAttributeName, value: customRedColor, range: NSRange(location:0, length: 2))
+        attributedString.appendAttributedString(instruction)
+    }
+
+    return attributedString.copy() as! NSAttributedString
 }
 
 func setAttributedtext (displayText: String) -> NSAttributedString {
